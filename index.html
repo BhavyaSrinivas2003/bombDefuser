@@ -11,8 +11,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="checkFun()">
+    
+    <div class="timer-container">
+        <input type="text" class="user-input" id="defuser" />
+        <br />
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/time-bomb-img.png" class="bomb-image" />
+        <p class="timer-display" id="timer">10</p>
+    </div>
     <script>
+    function checkFun(){
     let inputElement = document.getElementById("defuser");
     let timerElement = document.getElementById("timer");
     let counter = 10;
@@ -28,14 +36,9 @@
             timerElement.textContent = "You did it";
             clearInterval(uniqueId);
         }
-    }, 1000)
+    }, 1000);
+    }
     </script>
-    <div class="timer-container">
-        <input type="text" class="user-input" id="defuser" />
-        <br />
-        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/time-bomb-img.png" class="bomb-image" />
-        <p class="timer-display" id="timer">10</p>
-    </div>
 </body>
 
 </html>
